@@ -15,5 +15,27 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="appcompat" />
+    <orderEntry type="module" module-name="recyclerview" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://J:/android/support/v7/recyclerview/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://J:/android/support/v7/recyclerview/libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://J:/android/support/v7/appcompat/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://J:/android/support/v7/appcompat/libs" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>
