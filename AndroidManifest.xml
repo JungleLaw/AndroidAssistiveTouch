@@ -37,6 +37,13 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="android.permission.BLUETOOTH"/>
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.USES_POLICY_FORCE_LOCK"/>
+
+    <permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <permission android:name="android.permission.WRITE_APN_SETTINGS"/>
+    <permission android:name="android.permission.MODIFY_PHONE_STATE"/>
+    <permission android:name="android.permission.DEVICE_POWER"/>
 
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23"/>
     <application
@@ -57,5 +64,14 @@
         <service android:name=".AssistiveTouchService" android:exported="true">
             <intent-filter android:priority="1000"/>
         </service>
+        <receiver android:name=".LockSceenReceiver">
+            <meta-data
+                    android:name="android.app.device_admin"
+                    android:resource="@xml/lockscreen_admin"/>
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>
