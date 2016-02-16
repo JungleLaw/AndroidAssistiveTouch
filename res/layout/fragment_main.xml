@@ -1,27 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-    <!--<android.support.v7.widget.RecyclerView-->
-    <!--android:id="@+id/recyclerview"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"/>-->
-    <Button android:id="@+id/btn_wifi"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true" >
+
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="wifi"/>
-    <Button android:id="@+id/btn_net"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="net"/>
-    <Button android:id="@+id/btn_brightness"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="brightness"/>
-    <Button android:id="@+id/btn_bluetooth"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="bluetooth"/>
-</LinearLayout>
+            android:orientation="vertical" >
+
+        <Button
+                android:id="@+id/btn_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="test" />
+
+        <Button
+                android:id="@+id/btn_wifi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="wifi" />
+
+        <Button
+                android:id="@+id/btn_net"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="net" />
+
+        <Button
+                android:id="@+id/btn_brightness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="brightness" />
+
+        <Button
+                android:id="@+id/btn_bluetooth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="bluetooth" />
+
+        <Button
+                android:id="@+id/btn_rotation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="rotation" />
+
+        <Button
+                android:id="@+id/btn_airplane_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="airplane_mode" />
+
+        <Button
+                android:id="@+id/btn_gps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="gps" />
+
+        <Button
+                android:id="@+id/btn_lockscreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LockScreen" />
+
+        <Button
+                android:id="@+id/btn_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="go HOME" />
+
+        <Button
+                android:id="@+id/btn_dial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="dial" />
+
+        <Button
+                android:id="@+id/btn_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="email" />
+    </LinearLayout>
+
+</ScrollView>
