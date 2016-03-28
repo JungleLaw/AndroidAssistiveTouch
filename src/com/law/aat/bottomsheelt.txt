@@ -1,0 +1,36 @@
+View bottomSheetView = LayoutInflater.from(mContext).inflate(
+					R.layout.layout_bottom_sheet, null);
+			parentLayout = (LinearLayout) bottomSheetView
+					.findViewById(R.id.layout_bottom_sheet_parent);
+			for (int i = 0; i < mItemDisplays.length; i++) {
+				View itemView = LayoutInflater.from(mContext).inflate(
+						R.layout.layout_bottom_sheet_item, null);
+				Button button = (Button) itemView
+						.findViewById(R.id.btn_bottom_sheet_item);
+				if (mItemDisplays != null)
+					button.setText(mItemDisplays[i]);
+				if (mItemOncliClickListeners != null)
+					button.setOnClickListener(mItemOncliClickListeners[i]);
+				parentLayout.addView(itemView, i);
+			}
+			bottomSheetView.findViewById(R.id.cancel).setOnClickListener(
+					new android.view.View.OnClickListener() {
+
+						@Override
+						public void onClick(View v) {
+							mBottomSheet.cancel();
+						}
+					});
+			mBottomSheet = new BottomSheet(mContext, R.style.bottomSheetStyle);
+			mBottomSheet.addContentView(bottomSheetView,
+					new ViewGroup.LayoutParams(
+							ViewGroup.LayoutParams.MATCH_PARENT,
+							ViewGroup.LayoutParams.WRAP_CONTENT));
+			Window window = mBottomSheet.getWindow();
+			window.setGravity(Gravity.BOTTOM);
+			window.setBackgroundDrawableResource(android.R.color.transparent);
+			WindowManager.LayoutParams wl = window.getAttributes();
+			wl.width = ViewGroup.LayoutParams.MATCH_PARENT;
+			wl.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+			mBottomSheet.onWindowAttributesChanged(wl);
+			mBottomSheet.setCanceledOnTouchOutside(true);
